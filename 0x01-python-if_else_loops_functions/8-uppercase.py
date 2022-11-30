@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-# check if character is lowercase
-def islower(c):
-    if ord(c) <= 90 and ord(c) >= 65:
-        return True
-    else:
-        return False
+# Print a string in uppercase
+def uppercase(str):
+    for character in str:
+        if ord(character) > 96 and ord(character) < 123:
+            print("{}".format(chr(ord(character) - 32), end="")
+        else:
+            print(f"{character}")
