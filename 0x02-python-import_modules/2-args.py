@@ -4,7 +4,7 @@ import sys
 
 if __name__ == "__main__":
     arg = len(sys.argv) - 1
-    i = 1 # counter variable
+    i = 1  # counter variable
 
     if arg < 1:
         print("{} arguments.".format(arg))
