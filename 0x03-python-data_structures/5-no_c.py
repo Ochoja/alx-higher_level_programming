@@ -4,7 +4,11 @@ def no_c(my_string):
     removes all characters 'c'
     and 'C' from a string
     """
+    count = 0
+    for i in my_string:
+        if i == 'c' or i == 'C':
+            my_string = my_string[:count] + my_string[count+1:]
+            count -= 1
+        count += 1
 
-    for i in range(my_string):
-        if my_string[i] == 'c' or my_string[i] == 'C':
-            my_string.pop(i)
+    return my_string
