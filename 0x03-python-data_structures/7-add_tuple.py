@@ -26,5 +26,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
                 break
             temp = (tuple_a[i] + tuple_b[i],)
             new_tuple += temp
+        new_tuple += tuple_b[i+1:2]
 
     return new_tuple
