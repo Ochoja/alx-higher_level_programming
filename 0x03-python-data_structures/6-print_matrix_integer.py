@@ -7,8 +7,9 @@ def print_matrix_integer(matrix=[[]]):
         if type(matrix[i]) == list:
             for j in range(len(matrix[i])):
                 if j == len(matrix[i]) - 1:
-                    print("{:d}".format(matrix[i][j]))
+                    print("{:d}".format(matrix[i][j]), end="")
                 else:
                     print("{:d}".format(matrix[i][j]), end=" ")
         else:
-            print("{:d}".format(matrix[i]))
+            print("{:d}".format(matrix[i]), end="")
+        print("")

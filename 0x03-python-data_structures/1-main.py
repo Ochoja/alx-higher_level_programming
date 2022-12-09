@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 print_matrix_integer = __import__('6-print_matrix_integer').print_matrix_integer
 
-matrix = [1,5,
-    [2, 3, 5]
+matrix = [
+    [3,4,3],
+    [35,5,1]
 ]
 
 print_matrix_integer(matrix)
