@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+def multiply_by_2(a_dictionary):
+    """
+    retuns a new dictionary
+    with all multiplied by 2
+    """
