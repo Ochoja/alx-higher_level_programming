@@ -48,16 +48,17 @@ class Square:
             self.__position = value
 
     def my_print(self):
-        """prints the square with the character #
+        """prints the square with the character
         """
         if self.__size == 0:
             print("")
         else:
-            for x in range(self.__position[1]):
+            for x in range(self.__position[1]):  # add y axis position
                 print("")
+
             for i in range(self.__size):
-                for j in range(self.__position[0]):
-                    print(" ", end="")
-                for k in range(self.__size):
+                for y in range(self.__position[0]):
+                    print(" ", end="")  # add x axis position
+                for j in range(self.__size):
                     print("#", end="")
                 print("")
