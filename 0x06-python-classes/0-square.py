@@ -3,6 +3,7 @@
 Module contains Square Class
 """
 
+
 class Square:
     """
     Square is an empty class which
