@@ -54,13 +54,16 @@ class Rectangle:
         """
         method prints rectangle using '#'
         """
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            if i == self.__height - 1:
-                pass
-            else:
-                print()
+        if self.__width == 0 or self.__height == 0:
+            pass
+        else:
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    print("#", end="")
+                    if i == self.__height - 1:
+                        pass
+                    else:
+                        print()
 
     def __str__(self):
         """
