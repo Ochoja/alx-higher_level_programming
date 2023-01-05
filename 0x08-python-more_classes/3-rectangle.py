@@ -54,7 +54,9 @@ class Rectangle:
         """
         method prints rectangle using '#'
         """
-        if self.__width != 0 or self.__height != 0:
+        if self.__width == 0 or self.__height == 0:
+            pass
+        else:
             for i in range(self.__height):
                 for j in range(self.__width):
                     print("#", end="")
