@@ -1,0 +1,3 @@
+def magic_string(text=[]):
+    text.append("Best School")
+    return ' '.join(text)
