@@ -1,20 +1,21 @@
 #!/usr/bin/python3
-"""Module contains add_integer function
-
-add_integer:
-Function adds two integers and returns the value
+"""
+Returns an integer: the addition of a and b
+This function validates the type int or float
+Otherwise, raise error, Cast values too
 """
 
 
 def add_integer(a, b=98):
-    """adds two integer
-    Args: a, b
     """
-    if not isinstance(a, int) and not isinstance(a, float):
-        raise TypeError("a must be an integer")
-    if not isinstance(b, int) and not isinstance(b, float):
-        raise TypeError("b must be an integer")
-
-    a = int(a)
-    b = int(b)
-    return a + b
+    Adds the input integers
+    """
+    if (type(a) is float):
+        a = int(a)
+    if (type(b) is float):
+        b = int(b)
+    if not ((type(a) is int) or (type(a) is float)):
+        raise TypeError('a must be an integer')
+    if not ((type(b) is int) or (type(b) is float)):
+        raise TypeError('b must be an integer')
+    return (a + b)
