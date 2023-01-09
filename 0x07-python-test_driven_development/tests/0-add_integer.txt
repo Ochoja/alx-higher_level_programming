@@ -1,21 +1,119 @@
+=============================
+  Doctest for 0-add_integer
+=============================
+
+``add_integer(a, b)`` adds two arguments and returns the value.
+The function acceps integer or folat values as argument, any
+other data type raises an typeError
+
+
+Import
+==========
 >>> add_integer = __import__('0-add_integer').add_integer
+
+
+
+Integers and Floats
+=====================
 >>> add_integer(1, 2)
 3
+
 >>> add_integer(100, -2)
 98
->>> add_integer(2)
-100
+
+>>> add_integer(-100, 2)
+-98
+
 >>> add_integer(100.3, -2)
 98
->>> try:
-...     print(add_integer(4,"School"))
-... except Exception as e:
-...     print(e)
-...
-b must be an integer
->>> try:
-...     print(add_integer(None))
-... except Exception as e:
-...     print(e)
-...
-a must be an integer
+
+>>> add_integer(8.2, 3.1)
+11
+
+>>> add_integer(-10.3, -11.7)
+-22
+
+
+
+Strings and Character
+=====================
+
+Character
+
+>>> add_integer('a', 5)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer(6, 'f')
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+
+String
+
+>>> add_integer('Apple', 5)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer(6, 'fruit')
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+
+
+Data Structures
+=================
+
+Lists
+
+>>> add_integer([2, 3, 4], 5)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer(6, [2, 3, 4])
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+
+Tuples
+
+>>> add_integer((2, 3, 4), 5)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer(6, (2, 3, 4))
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+
+Sets
+
+>>> add_integer({"peach", "banana", "egg"}, 5)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer(6, {"noodles", "pear"})
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+
+Dictionary
+>>> add_integer({"name": "Daniel", "course": "Python"}, 5)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+>>> add_integer(6, {"name": "Daniel", "course": "Python"})
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
