@@ -1,36 +1,40 @@
 #!/usr/bin/python3
-""" Base Geometry Class """
+"""Rectangle class that inherits from BaseGeometry"""
 
 
 class BaseGeometry:
-    """ class that improve geometry with integer validator"""
+    """
+    Base geometry class
+    """
     def area(self):
-        """ raises an Exception with the message area() is not implemented """
+        """
+        raises an exception
+        """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """ validates value """
-        if (type(value) is not int):
-            raise TypeError(name + " must be an integer")
-        if (value <= 0):
-            raise ValueError(name + " must be greater than 0")
-
-""" Program that build a full rectangle """
+        """
+        validates value
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
+        if not isinstance(name, str):
+            raise TypeError("name must be a string")
 
 
 class Rectangle(BaseGeometry):
-    """ class Rectangle that inherits from BaseGeometry """
     def __init__(self, width, height):
-        """ Constructor """
+        """constructor"""
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
-        BaseGeometry.integer_validator(self, "width", self.__width)
-        BaseGeometry.integer_validator(self, "height", self.__height)
 
     def area(self):
-        """ method that return de area of rectangle """
+        """returns area of rectangle"""
         return self.__width * self.__height
 
     def __str__(self):
-        """ string representation """
-        return "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
