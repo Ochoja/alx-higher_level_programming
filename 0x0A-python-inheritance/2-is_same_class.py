@@ -6,9 +6,10 @@ checks if objects belong to same class
 
 def is_same_class(obj, a_class):
     """
-    check if `obj` belongs to `a_class`
+    check if `obj` is an instance of `a_class`
     """
-    if isinstance(obj, a_class) and a_class != object:
+    # check if obj is a built in type
+    if isinstance(obj, a_class) and a_class != object
         return True
     else:
         return False
