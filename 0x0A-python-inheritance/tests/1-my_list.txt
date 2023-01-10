@@ -1,0 +1,41 @@
+============================
+  Doctest for 1-my_list.py
+============================
+
+``MyList`` is a custom class that inherits from the `list` class.
+
+``print_sorted()`` is a method of MyList class which prints list in
+ascending order
+
+
+  Import
+==========
+>>> MyList = __import__('1-my_list').MyList
+
+
+
+  Create List
+===============
+>>> my_list = MyList()
+
+
+
+  List operations
+====================
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list
+[1, 4, 2]
+
+
+
+  print_sorted method
+=======================
+>>> my_list.print_sorted()
+[1, 2, 4]
+
+
+Check if original list has been modified
+>>> my_list
+[1, 4, 2]
