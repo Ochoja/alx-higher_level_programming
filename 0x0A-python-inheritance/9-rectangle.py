@@ -2,9 +2,8 @@
 """
 contains Rectangle class which inherits
 from BaseGeometry
-
-
 """
+
 
 class BaseGeometry:
     """
@@ -12,17 +11,11 @@ class BaseGeometry:
 
     """
     def area(self):
-        """
-        raises an exception
-
-        """
+        """raises an exception"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-        validates value
-
-        """
+        """validates value"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
@@ -30,11 +23,12 @@ class BaseGeometry:
         if not isinstance(name, str):
             raise TypeError("name must be a string")
 
+"""Build a rectangle"""
+
 
 class Rectangle(BaseGeometry):
     """
     Rectangle class inherits from BaseGeometry
-
     """
     def __init__(self, width, height):
         self.integer_validator("width", width)
