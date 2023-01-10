@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-contains BaseGeometry class
+Contains Rectangle class that
+inherits from BaseGeometry
 """
 
 
@@ -24,3 +25,14 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
         if not isinstance(name, str):
             raise TypeError("name must be a string")
+
+
+class Rectangle(BaseGeometry):
+    """
+    Rectangle class that inherits from BaseGeometry
+    """
+    def __init__(self, width, height):
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
