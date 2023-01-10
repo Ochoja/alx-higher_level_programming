@@ -6,6 +6,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    """Square class which inherits from Rectangle"""
     def __init__(self, size):
         """Constructor"""
         self.integer_validator("size", size)
@@ -16,4 +17,5 @@ class Square(Rectangle):
         return self.__size ** 2
 
     def __str__(self):
+        """string representation"""
         return "[Rectangle] {}/{}".format(self.__size, self.__size)
