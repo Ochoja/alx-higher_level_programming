@@ -2,21 +2,26 @@
 """
 contains Rectangle class which inherits
 from BaseGeometry
+
+
 """
 
 class BaseGeometry:
     """
     Base geometry class
+
     """
     def area(self):
         """
         raises an exception
+
         """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
         validates value
+
         """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
@@ -29,6 +34,7 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """
     Rectangle class inherits from BaseGeometry
+
     """
     def __init__(self, width, height):
         self.integer_validator("width", width)
