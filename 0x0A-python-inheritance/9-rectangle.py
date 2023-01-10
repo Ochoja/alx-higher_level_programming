@@ -1,29 +1,21 @@
 #!/usr/bin/python3
-"""
-contains Rectangle class which inherits
-from BaseGeometry
-"""
+""" Base Geometry Class """
 
 
 class BaseGeometry:
-    """
-    Base geometry class
-    """
+    """ class that improve geometry with integer validator"""
     def area(self):
-        """raises an exception"""
+        """ raises an Exception with the message area() is not implemented """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """validates value"""
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-        if not isinstance(name, str):
-            raise TypeError("name must be a string")
+        """ validates value """
+        if (type(value) is not int):
+            raise TypeError(name + " must be an integer")
+        if (value <= 0):
+            raise ValueError(name + " must be greater than 0")
 
-
-"""Build a rectangle"""
+""" Program that build a full rectangle """
 
 
 class Rectangle(BaseGeometry):
