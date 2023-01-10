@@ -22,20 +22,32 @@ ascending order
 
   List operations
 ====================
+
+Adding Integers to list
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
->>> my_list
-[1, 4, 2]
+>>> my_list.insert(0, 0)
 
+
+Printing List
+>>> my_list
+[0, 1, 4, 2]
+
+
+Adding Non-Integer Values to List
+>>> my_list.append("string")
+Traceback (most recent call last):
+	  ...
+ValueError: list must contain integers only
 
 
   print_sorted method
 =======================
 >>> my_list.print_sorted()
-[1, 2, 4]
+[0, 1, 2, 4]
 
 
 Check if original list has been modified
 >>> my_list
-[1, 4, 2]
+[0, 1, 4, 2]

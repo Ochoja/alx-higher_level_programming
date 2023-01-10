@@ -11,3 +11,8 @@ class MyList(list):
         new_list = list(eval(repr(self)))
         new_list.sort()
         print(new_list)
+
+    def append(self, item):
+        if not isinstance(item, int):
+            raise ValueError("list must contain integers only")
+        super().append(item)
