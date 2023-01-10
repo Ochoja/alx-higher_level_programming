@@ -25,7 +25,7 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """ class Rectangle that inherits from BaseGeometry """
+    """Rectangle class that inherits from BaseGeometry"""
     def __init__(self, width, height):
         """ Constructor """
         self.integer_validator("width", width)
@@ -33,11 +33,10 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-
     def area(self):
-        """ method that return de area of rectangle """
+        """returns area of rectangle"""
         return self.__width * self.__height
 
     def __str__(self):
-        """ string representation """
+        """string representation"""
         return "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
