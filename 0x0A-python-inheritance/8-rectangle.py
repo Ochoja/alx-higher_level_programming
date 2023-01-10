@@ -19,13 +19,12 @@ class BaseGeometry:
         """
         validates value
         """
-        if not isinstance(value, int) or type(value) == bool:
+        if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
         if not isinstance(name, str):
             raise TypeError("name must be a string")
-        return True
 
 
 class Rectangle(BaseGeometry):
