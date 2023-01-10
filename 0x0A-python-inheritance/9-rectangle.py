@@ -8,7 +8,6 @@ from BaseGeometry
 class BaseGeometry:
     """
     Base geometry class
-
     """
     def area(self):
         """raises an exception"""
@@ -32,6 +31,7 @@ class Rectangle(BaseGeometry):
     Rectangle class inherits from BaseGeometry
     """
     def __init__(self, width, height):
+        """constructor"""
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
