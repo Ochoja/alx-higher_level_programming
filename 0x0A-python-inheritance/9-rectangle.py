@@ -23,6 +23,7 @@ class BaseGeometry:
         if not isinstance(name, str):
             raise TypeError("name must be a string")
 
+
 """Build a rectangle"""
 
 
