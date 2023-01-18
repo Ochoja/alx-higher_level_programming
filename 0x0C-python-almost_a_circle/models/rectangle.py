@@ -13,12 +13,10 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
-        @property
-        def width(self):
+        def get_width(self):
             return self.__width
 
-        @width.setter
-        def width(self, width):
+        def set_width(self, width):
             self.__width = width
 
         @property
