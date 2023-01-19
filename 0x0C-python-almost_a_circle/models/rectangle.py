@@ -81,6 +81,16 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
+    def update(self, *args):
+        """update the Rectangle class"""
+        arg_list = [self.id, self.__width, self.__height, self.__x, self.__y]
+
+        for i in range(len(args)):
+            arg_list[i] = args[i]
+
+        self.id, self.__width, self.__height, self.__x, self.__y = arg_list
+
+
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"\
             f" - {self.__width}/{self.__height}"
