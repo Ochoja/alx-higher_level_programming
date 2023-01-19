@@ -81,14 +81,17 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update the Rectangle class"""
-        arg_list = [self.id, self.__width, self.__height, self.__x, self.__y]
+        if len(args) != 0:
+            arg_list = [self.id, self.width, self.height, self.x, self.y]
 
-        for i in range(len(args)):
-            arg_list[i] = args[i]
-
-        self.id, self.__width, self.__height, self.__x, self.__y = arg_list
+            for i in range(len(args)):
+                arg_list[i] = args[i]
+            self.id, self.width, self.height, self.x, self.y = arg_list
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"\

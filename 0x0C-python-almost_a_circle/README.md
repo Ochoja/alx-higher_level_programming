@@ -3,3 +3,6 @@
 Unit Test
 args/kwargs
 JSON encoder and decoder
+
+## Interesting Concepts/Functions discovered
+setattr()
