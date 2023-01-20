@@ -96,7 +96,10 @@ class Rectangle(Base):
     def to_dictionary(self):
         """return dictionary representation of Rectangle
         Dictionary contains fields of class"""
-        return self.__dict__
+        new_dict = {}
+        for key, value in self.__dict__.items():
+            new_dict[key.replace("_Rectangle__", "")] = value
+        return new_dict
 
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"\
