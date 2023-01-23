@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""converts json string to object"""
 import json
 
 
