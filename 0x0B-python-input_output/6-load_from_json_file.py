@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""load an object saved in a json file"""
 import json
 
 
