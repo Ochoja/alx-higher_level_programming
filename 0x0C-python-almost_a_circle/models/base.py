@@ -29,21 +29,11 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """saves list_objs to json file"""
-        if list_objs is None:
-            with open("Rectangle.json", mode='w') as filename:
-                pass
-        else:
-            try:
-                obj = []
-                for instance in list_objs:
-                    obj.append(instance.to_dictionary())
-            except Exception as e:
-                print(e, end=" ")
-                print("Accepts Square or Rectangle instance only")
-            else:
-                if "size" in obj[0]:
-                    with open("Square.json", mode='w') as filename:
-                        filename.write(cls.to_json_string(obj))
-                else:
-                    with open("Rectangle.json", mode='w') as filename:
-                        filename.write(cls.to_json_string(obj))
+        obj = []
+        filename = cls.__name__ + ".json"
+
+        for instance in list_objs:
+            obj.append(instance.to_dictionary())
+
+        with open(filename, mode='w') as json_file:
+            json_file.write(cls.to_json_string(obj))
