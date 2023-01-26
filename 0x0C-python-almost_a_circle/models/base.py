@@ -33,8 +33,17 @@ class Base:
             with open("Rectangle.json", mode='w') as filename:
                 pass
         else:
-            with open("Rectangle.json", mode='w') as filename:
+            try:
                 obj = []
                 for instance in list_objs:
                     obj.append(instance.to_dictionary())
-                filename.write(cls.to_json_string(obj))
+            except Exception as e:
+                print(e, end=" ")
+                print("Accepts Square or Rectangle instance only")
+            else:
+                if "size" in obj[0]:
+                    with open("Square.json", mode='w') as filename:
+                        filename.write(cls.to_json_string(obj))
+                else:
+                    with open("Rectangle.json", mode='w') as filename:
+                        filename.write(cls.to_json_string(obj))
