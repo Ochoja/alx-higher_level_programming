@@ -49,6 +49,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """returns an instance with attributes set
+        using **dictionary"""
         if "size" in dictionary:
             dummy = cls(dictionary["size"])
         elif "width" in dictionary:
