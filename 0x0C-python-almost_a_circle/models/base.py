@@ -38,3 +38,11 @@ class Base:
 
         with open(filename, mode='w') as json_file:
             json_file.write(cls.to_json_string(obj))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """return the list of the JSON string representation"""
+        if json_string == "" or json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
