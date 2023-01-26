@@ -51,10 +51,10 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with attributes set
         using **dictionary"""
-        if "size" in dictionary:
-            dummy = cls(dictionary["size"])
-        elif "width" in dictionary:
+        if cls.__name__ == "Rectangle":
             dummy = cls(dictionary["width"], dictionary["height"])
+        else:
+            dummy = cls(dictionary["size"])
 
-        cls.update(dictionary)
+        dummy.update(**dictionary)
         return dummy
