@@ -1,3 +1,3 @@
-/*Lists all databases in a server*/
---show databases
-SHOW DATABASES
+-- List all databases
+-- Show command list databases in server
+SHOW DATABASES;
