@@ -1,7 +1,6 @@
 -- Creates a table in a database
 -- Creates a table `second_table`
-CREATE TABLE IF NOT EXISTS second_table
-(id INT, name VARCHAR(256), score INT);
+CREATE TABLE IF NOT EXISTS second_table (id INT, name VARCHAR(256), score INT);
 
 --insert record
 INSERT INTO second_table VALUES(1, "John", 10);
