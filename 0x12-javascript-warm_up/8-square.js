@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /* Script that prints a square */
-if (process.argv[2]) {
+if (!isNaN(process.argv[2])) {
   let text = '';
   for (let i = 0; i < process.argv[2]; i++) {
     text += 'X';
