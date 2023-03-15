@@ -30,7 +30,6 @@ class Rectangle {
     this.height = hold;
   }
 
-
   // Doubles the width and height
   double () {
     this.width *= 2;
