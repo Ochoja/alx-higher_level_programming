@@ -5,22 +5,22 @@ class Rectangle {
       this.width = w;
       this.height = h;
     }
+  }
 
-    this.print = function () {
-      if (this.width && this.height) {
-        let column = '';
+  print() {
+    if (this.width && this.height) {
+      let column = '';
 
-        // Create column
-        for (let i = 1; i <= this.width; i++) {
-          column += 'X';
-        }
-
-        // Print rows
-        for (let i = 1; i <= this.height; i++) {
-          console.log(column);
-        }
+      // Create column
+      for (let i = 1; i <= this.width; i++) {
+        column += 'X';
       }
-    };
+
+      // Print rows
+      for (let i = 1; i <= this.height; i++) {
+        console.log(column);
+      }
+    }
   }
 }
 
