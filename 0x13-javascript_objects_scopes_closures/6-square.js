@@ -4,7 +4,7 @@ const ParentSquare = require('./5-square');
 class Square extends ParentSquare {
   charPrint (c) { // Print square using the char c
     if (c) {
-      let column = `${c}`;
+      let column = '';
 
       // Define column
       for (let i = 1; i <= this.width; i++) {
