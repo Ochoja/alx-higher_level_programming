@@ -7,7 +7,7 @@ import MySQLdb
 
 if __name__ == "__main__":
     # create connection to database
-    db = MySQLdb.connect(host="localhost", user=f"{sys.argv[1]}",
+    db = MySQLdb.connect(host="localhost", port=3306, user=f"{sys.argv[1]}",
                          password=f"{sys.argv[2]}", database=f"{sys.argv[3]}")
 
     # perform db query using cursor
@@ -21,3 +21,7 @@ if __name__ == "__main__":
     # print result
     for i in result:
         print(i)
+
+    # clean up (close cursor/db)
+    cursor.close()
+    db.close()
