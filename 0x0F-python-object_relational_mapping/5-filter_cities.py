@@ -17,7 +17,8 @@ if __name__ == "__main__":
     if 'TRUNCATE' not in sys.argv[4]:  # make script sql injection free
         cursor = db.cursor()
         cursor.execute(f"SELECT * FROM cities WHERE state_id = \
-                         (SELECT id FROM states WHERE name='{sys.argv[4]}')")
+                         (SELECT id FROM states WHERE name='{sys.argv[4]}') \
+                          ORDER BY id")
 
         # get and print results
         result = cursor.fetchall()
