@@ -12,8 +12,9 @@ if __name__ == "__main__":
 
     # perform db query using cursor
     cursor = db.cursor()
-    cursor.execute("SELECT id, cities.name, name FROM states \
-                    JOIN cities ON states.id=cities.state_id")
+    cursor.execute("SELECT ROW_NUMBER() OVER(ORDER BY cities.id), \
+                    cities.name, states.name FROM states \
+                    INNER JOIN cities ON states.id=cities.state_id")
 
     # get and print results
     result = cursor.fetchall()
