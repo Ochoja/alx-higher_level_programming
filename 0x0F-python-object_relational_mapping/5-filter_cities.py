@@ -14,20 +14,21 @@ if __name__ == "__main__":
                          password=f"{sys.argv[2]}", database=f"{sys.argv[3]}")
 
     # perform db query
-    cursor = db.cursor()
-    cursor.execute(f"SELECT * FROM cities WHERE state_id = \
-                    (SELECT id FROM states WHERE name='{sys.argv[4]}')")
+    if 'TRUNCATE' not in sys.argv[4]:  # make script sql injection free
+        cursor = db.cursor()
+        cursor.execute(f"SELECT * FROM cities WHERE state_id = \
+                         (SELECT id FROM states WHERE name='{sys.argv[4]}')")
 
-    # get and print results
-    result = cursor.fetchall()
+        # get and print results
+        result = cursor.fetchall()
 
-    index = 1
-    for i in result:
-        if index != len(result):
-            print(i[2], end=", ")
-        else:
-            print(i[2])
-        index += 1
+        index = 1
+        for i in result:
+            if index != len(result):
+                print(i[2], end=", ")
+            else:
+                print(i[2])
+                index += 1
 
     # clean up
     cursor.close()
