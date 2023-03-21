@@ -28,7 +28,7 @@ if __name__ == "__main__":
                 print(i[2], end=", ")
             else:
                 print(i[2])
-                index += 1
+            index += 1
 
     # clean up
     cursor.close()
