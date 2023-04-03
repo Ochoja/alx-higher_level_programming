@@ -2,6 +2,10 @@
  Doctest for 4-print_square.py
 ===============================
 
+``print_square(size)`` Prints a square where sides equals
+`size`. An error is raised if this value is not a valid integer
+
+
  Import
 ==========
 >>> print_square = __import__('4-print_square').print_square
