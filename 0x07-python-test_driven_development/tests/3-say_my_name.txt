@@ -74,3 +74,13 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 	  ...
 TypeError: first_name must be a string
+
+
+
+=======================
+ Invalid Last Argument
+=======================
+>>> say_my_name("Daniel", {"One", "Two"})
+Traceback (most recent call last):
+	  ...
+TypeError: last_name must be a string
