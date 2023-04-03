@@ -1,0 +1,76 @@
+================================
+  Doctest for 3-say_my_name.py
+================================
+
+==========
+  Import
+==========
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+ Two strings
+==============
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+
+ One string
+==============
+>>> say_my_name("John")
+My name is John 
+
+
+ One invalid argument
+=========================
+>>> say_my_name("John", 12)
+Traceback (most recent call last):
+	  ...
+TypeError: last_name must be a string
+
+
+ One invalid argument
+=========================
+>>> say_my_name(12, "John")
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
+
+
+===================
+ Invalid Arguments
+===================
+
+
+  List
+===========
+>>> say_my_name([12, 23, 32, 2], "Doe")
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
+
+
+  Dictionary
+===============
+>>> say_my_name({'key': 'value'}, "Jake")
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
+
+
+ Tuple
+=========
+>>> say_my_name((2, 4, 6, 6), "Jake")
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
+
+
+ Sets
+=========
+>>> say_my_name({"One", "Two"}, "Jake")
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
