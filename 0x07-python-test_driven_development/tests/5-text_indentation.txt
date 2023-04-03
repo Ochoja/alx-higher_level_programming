@@ -7,6 +7,14 @@ Import
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 
+Test
+=====
+>>> text_indentation("This is a? string")
+This is a?
+<BLANKLINE>
+string
+
+
  Integer
 ==========
 >>> text_indentation(5)
