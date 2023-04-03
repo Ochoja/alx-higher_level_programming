@@ -4,5 +4,52 @@
 
 Import
 =======
-text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
+
+ Integer
+==========
+>>> text_indentation(5)
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+
+ Float
+========
+>>> text_indentation(5.5)
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+
+ List
+=======
+>>> text_indentation([5, 3, 3])
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+
+ Tuple
+=======
+>>> text_indentation((5, 3, 4))
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+
+ Set
+=======
+>>> text_indentation({"this", "sucks"})
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
+
+
+ Dictionary
+============
+>>> text_indentation({"test": "doctest"})
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
