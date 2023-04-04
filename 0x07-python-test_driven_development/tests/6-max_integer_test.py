@@ -10,6 +10,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([2, 3.5, 8.9]), 8.9)
         self.assertEqual(max_integer([2, 5.2, 9.1, 3.33]), 9.1)
 
+    def test_list2(self):
+        self.assertEqual(max_integer([-2, 5, 3]), 5)
+
     def test_tuple(self):
         self.assertEqual(max_integer((1, 2, 3)), 3)
         self.assertEqual(max_integer((1.0, 7.9, 5.6)), 7.9)
