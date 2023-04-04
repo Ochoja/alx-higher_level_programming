@@ -20,6 +20,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(max_integer([]), None)
 
+    def test_empty2(self):
+        self.assertEqual(max_integer(), None)
+
     def test_string(self):
         self.assertEqual(max_integer("Strong"), 't')
 
