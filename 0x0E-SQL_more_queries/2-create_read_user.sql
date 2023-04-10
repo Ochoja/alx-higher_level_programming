@@ -6,4 +6,4 @@ CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost';
 -- Set password of user user_0d_2
 SET PASSWORD FOR 'user_0d_2'@'localhost' = 'user_0d_2_pwd';
 -- Grant user select privilege on database 'hbtn_0d_2'
-GRANT SELECT ON 'hbtn_0d_2' TO 'user_0d_2'@'localhost';
+GRANT SELECT ON hbtn_0d_2 TO 'user_0d_2'@'localhost';
