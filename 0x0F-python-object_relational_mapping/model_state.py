@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """State model with sqlAlchemy"""
-from sqlalchemy import declarative_base
-from sqlalchemy.ext.declarative import Column, String, Integer
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, String, Integer
 
 
 Base = declarative_base()
