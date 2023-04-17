@@ -13,11 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)  # connect model to db (create table)
     session = Session(engine)  # for CRUD operations
 
-    count = 0
     for state in session.query(State).order_by(State.id).all():
-        if count == 1:
-            break
         print(f"{state.id}: {state.name}")
-        count += 1
 
     session.close()
