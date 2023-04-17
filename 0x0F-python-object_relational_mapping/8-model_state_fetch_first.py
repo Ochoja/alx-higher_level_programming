@@ -7,14 +7,17 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    engine = create_engine(f"mysql+mysqldb://{argv[1]}:{argv[2]}
-                           @localhost/{argv[3]}")
+    url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
+    engine = create_engine(url)
 
     Base.metadata.create_all(engine)  # connect model to db (create table)
     session = Session(engine)  # for CRUD operations
 
-
-    for state in session.query(State).first():
+    count = 0
+    for state in session.query(State).order_by(State.id).all():
+        if count == 1:
+            break
         print(f"{state.id}: {state.name}")
+        count += 1
 
     session.close()
