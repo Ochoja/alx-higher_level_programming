@@ -7,13 +7,12 @@ from sys import argv
 
 
 if __name__ == "__main__":
+    # create db connection
     url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
     engine = create_engine(url)
 
-    Base.metadata.create_all(engine)  # connect model to db (create table)
-    session = Session(engine)  # for CRUD operations
+    session = Session(engine)  # db handler
 
-    for state in session.query(State).order_by(State.id).all():
-        print(f"{state.id}: {state.name}")
+    state = session.query(State).all()[0]
 
-    session.close()
+    print(f"{state.id}: {state.name}")
