@@ -13,7 +13,7 @@ if __name__ == "__main__":
     session = Session(engine)
 
     states = session.query(State).order_by(State.id).\
-             filter(State.name.contains('a'))
+             filter(State.name.__contains__('a'))
 
     for state in states:
         print(f"{state.id}: {state.name}")
