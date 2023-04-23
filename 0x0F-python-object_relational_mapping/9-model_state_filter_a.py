@@ -10,6 +10,7 @@ if __name__ == "__main__":
     url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
     engine = create_engine(url, echo=True)
 
+    Base.metadata.create_all(engine)
     session = Session(engine)
 
     states = session.query(State).order_by(State.id).\
