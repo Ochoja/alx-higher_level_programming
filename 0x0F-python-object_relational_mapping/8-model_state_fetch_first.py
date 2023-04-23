@@ -13,6 +13,6 @@ if __name__ == "__main__":
 
     session = Session(engine)  # db handler
 
-    state = session.query(State).all()[0]
+    state = session.query(State).first()
 
     print(f"{state.id}: {state.name}")
