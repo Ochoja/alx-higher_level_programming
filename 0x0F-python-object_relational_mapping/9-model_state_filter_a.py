@@ -6,9 +6,8 @@ from model_state import Base, State
 from sys import argv
 
 if __name__ == "__main__":
-    url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
-    engine = create_engine(url, echo=True)
-
+    engine = create_engine('mysql+mysqldb://argv[1]:argv[2]//@localhost/argv[3]')
+    
     session = Session(engine)
 
     states = session.query(State).order_by(State.id).\
