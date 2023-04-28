@@ -1,3 +1,3 @@
 #!/bin/bash
 # sends a GET request and display body of response
-curl -LsX "$1"
+curl -LsX GET "$1"
