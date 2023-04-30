@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Script that posts an email"""
 import urllib.parse
 import urllib.request
 from sys import argv
