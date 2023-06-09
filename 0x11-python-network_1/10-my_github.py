@@ -7,7 +7,10 @@ import sys
 
 user = sys.argv[1]
 password = sys.argv[2]
-header = {'auth': f'{password}'}
+header = {'Authorization': f'token {password}'}
 
-req = requests.get(f'https://api.github.com/users/{user}', headers=header)
-print(req.json()['id'])
+try:
+    req = requests.get(f'https://api.github.com/users/{user}', headers=header)
+    print(req.json()['id'])
+except Exception:
+    print(None)
